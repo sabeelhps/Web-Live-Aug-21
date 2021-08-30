@@ -1,0 +1,58 @@
+
+/* BASIC SELECTORS */
+
+/* This is a comment */
+
+/* ------------------------------------- */
+
+/* Universal Selector */
+
+*{
+    border:1px solid gray;
+}
+
+
+/* Element selector */
+
+h1{
+    color:purple;
+    border: 4px solid red;
+    background-color: aqua;
+}
+
+
+/* ID Selector */
+#special{
+    color:purple;
+    text-decoration: underline;
+    font-size: 24px;
+}
+
+/* class selector */
+
+.one{
+    color:palevioletred;
+    font-weight: bold;
+}
+
+.two{
+    font-size: 24px;
+    color:orange;
+}
+
+.three{
+    border:1px solid black;
+}
+
+/* Attribute selector */
+
+input[type="text"]{
+    background-color: green;
+}
+
+a[href="http://google.com"]{
+    font-weight: bold;
+    color:lightcoral;
+    font-size: 24px;
+}
+

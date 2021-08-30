@@ -1,0 +1,15 @@
+h1{
+    color:purple;
+    background-color: lightblue;
+    border:4px solid black;
+}
+
+p{
+    width: 800px;
+    border: 1px solid gray;
+}
+
+h2{
+    text-transform:uppercase;
+    font-size: 40px;
+}
