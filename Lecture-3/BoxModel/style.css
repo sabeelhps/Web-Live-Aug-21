@@ -1,0 +1,42 @@
+p{
+    /* Dimensions - height and width */
+
+    width: 400px;
+
+
+    /* Border */
+
+    border: 2px solid green;
+
+
+    /* Margin */
+
+    /* margin:40px; */
+
+    /* margin-top: 40px;
+    margin-right: 50px;
+    margin-bottom: 60px;
+    margin-left: 70px; */
+
+    /* margin:40px 50px 60px 70px; */
+
+    /* margin: 40px 50px; */
+
+    margin: 40px auto;
+
+   
+
+    /* Padding */
+
+    /* padding: 50px; */
+
+    /* padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    padding-left: 50px; */
+
+    /* padding: 20px 30px 40px 50px; */
+
+    padding: 30px 40px;
+
+}
