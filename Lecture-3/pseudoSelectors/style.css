@@ -1,0 +1,70 @@
+div{
+    height: 200px;
+    width: 200px;
+    background-color: palevioletred;
+    border: 3px solid black;
+}
+
+div:hover{
+    border-radius: 50%;
+    background-color: lightgreen;
+}
+
+h1:active{
+    background-color: lightpink;
+    border: 3px solid black;
+}
+
+input:focus{
+    background-color: cornflowerblue;
+}
+
+
+ul a:visited{
+    color: green;
+}
+
+/* ol li:first-child{
+    color:red;
+}
+
+ol li:last-child{
+    color:blue;
+}
+
+ol li:nth-of-type(5){
+    text-decoration: line-through;
+    color:lime;
+}
+
+ol li:nth-of-type(even){
+    font-weight: bold;
+}
+
+ol li:nth-of-type(odd){
+    background-color: palegoldenrod;
+} */
+
+
+ol li:nth-of-type(2n+3){
+    background-color: paleturquoise;
+}
+
+ol li:active{
+    color:red;
+}
+
+h1::after{
+    content: "This is from CSS";
+    border: 1px dashed black;
+    background-color: burlywood;
+}
+
+h1::before{
+    content: "\2665";
+}
+
+ul li::before{
+    content:"\260E";
+}
+

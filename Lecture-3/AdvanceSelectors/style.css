@@ -1,0 +1,33 @@
+/* Descendent combinator */
+
+
+div p strong{
+    color:red;
+}
+
+p strong{
+    color:purple;
+}
+
+li a[href="http://google.com"]{
+    color: green;
+}
+
+/* Child Combinator */
+
+ol > li{
+    border-top:3px solid palevioletred;
+}
+
+
+/* Adjacent sibling combinator */
+
+h4+p{
+    background-color: lightgreen;
+}
+
+/* General Sibling combinator */
+
+section div ~ p{
+    text-decoration: line-through;
+}
