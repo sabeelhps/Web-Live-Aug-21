@@ -1,0 +1,43 @@
+
+
+article{
+    font-size: 100px;
+}
+
+article ul{
+    font-size: 50%;
+}
+
+section:nth-of-type(1){
+    height: 100px;
+    width: 100px;
+    border:2px solid black;
+}
+
+section:nth-of-type(1) div{
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    background-color: aqua;
+    box-sizing: border-box;
+}
+
+
+section:nth-of-type(2){
+    font-size: 20px;
+}
+
+section:nth-of-type(2) ul{
+    /* font-size: 2em; */
+
+    font-size: 2rem;
+}
+
+section:nth-of-type(3){
+    
+    height: 40vh;
+    width: 70vw;
+    background-color: palevioletred;
+    border:1px solid #ccc;
+}
+

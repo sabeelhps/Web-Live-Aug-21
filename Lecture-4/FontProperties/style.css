@@ -1,0 +1,38 @@
+section{
+    border:1px solid #ccc;
+    padding: 16px;
+    width: 75vw;
+    margin:40px auto;
+    background-color: aqua;
+
+}
+
+h1{
+    font-size: 70px;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    color: white;
+    /* text-shadow: 5px 5px 2px red, 8px 8px 1px blue; */
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+
+}
+
+section p{
+    /* font-size: 30px;
+    font-family: 'Source Code Pro', monospace;
+    line-height: 4rem; */
+    font: italic small-caps bold 24px/2 cursive;
+    letter-spacing: 0.1em;
+}

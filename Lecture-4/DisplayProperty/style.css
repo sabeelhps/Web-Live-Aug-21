@@ -1,0 +1,35 @@
+h1{
+    border:2px solid black;
+    background-color: aqua;
+    display: inline;
+
+    /* height: 500px;
+    width: 500px;
+
+    margin: 30px;
+    padding: 10px; */
+}
+
+span{
+    border: 2px solid black;
+    background-color: palevioletred;
+    display: block;
+
+    height: 50px;
+    width: 400px;
+
+    margin: 30px;
+    padding: 20px;
+}
+
+div{
+    height: 150px;
+    width: 150px;
+    border:3px solid black;
+    margin: 10px;
+    display: inline-block;
+}
+
+/* div:nth-of-type(2){
+    display: none;
+} */
