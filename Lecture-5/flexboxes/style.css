@@ -1,0 +1,47 @@
+h1{
+    text-align: center;
+}
+
+section{
+    width: 75vw;
+    border: 1px solid black;
+    height: 600px;
+    margin: 40px auto;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+
+    justify-content: flex-start;
+
+    /* flex-wrap: wrap; */
+
+    /* align-items: flex-start; */
+    
+    /* align-content: flex-start; */
+}
+
+div{
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+    font-size: 30px;
+}
+
+div:nth-of-type(1){
+    flex-grow: 1;
+}
+
+div:nth-of-type(5){
+    /* flex-basis: 250px;
+    flex-grow: 2;
+    flex-shrink: 4; */
+
+    /* shorthand for above 3 properties */
+    flex:2 4 250px;
+}
+
+/* div:nth-of-type(3){
+    align-self: flex-end;
+} */
