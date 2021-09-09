@@ -1,0 +1,56 @@
+section{
+    border:1px solid #ccc;
+    width: 60vw;
+    margin:50px auto;
+    padding: 16px;
+}
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+}
+
+/* @media screen and (max-width:790px){
+    h1{
+      color:red;
+      font-size: 3rem;
+    }
+} */
+
+/* @media screen and (orientation:landscape){
+    h1{
+        color:blue;
+        text-shadow: 1px 1px 2px rgb(104,104,104);
+        text-transform: uppercase;
+    }
+} */
+
+@media screen and (orientation:portrait),(max-width:780px){
+    h1{
+        color:blue;
+        text-shadow: 1px 1px 2px rgb(104,104,104);
+        text-transform: uppercase;
+    }
+}
+
+
+
+/* 
+@media screen and (max-width:595px){
+    h1{
+        color:green;
+        border:1px solid black;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:380px){
+    h1{
+        color:purple;
+        border:1px solid green;
+        font-size: 1.5rem;
+    }
+} */
+
+
+

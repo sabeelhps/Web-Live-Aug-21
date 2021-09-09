@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: #0077b6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width:100%;
+
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    /* border:1px solid white; */
+    width: 450px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+li{
+    padding:14px 0px;
+}
+
+@media screen and (max-width:580px){
+
+    nav{
+        flex-direction: column;
+    }
+
+    ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
