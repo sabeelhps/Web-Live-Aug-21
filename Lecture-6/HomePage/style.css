@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: #0077b6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width:100%;
+    position: fixed;
+    top:0px;
+    box-shadow: 0px 0px 2px rgb(104,104,104);
+
+    z-index: 10;
+
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    /* border:1px solid white; */
+    width: 450px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+li{
+    padding:14px 0px;
+}
+
+@media screen and (max-width:580px){
+
+    nav{
+        flex-direction: column;
+    }
+
+    ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
+/* Navbar CSS End here */
+
+section{
+    width: 75vw;
+    margin:50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+figure{
+    width: 300px;
+    text-align: center;
+    border:1px solid #ccc;
+    margin:15px;
+    transition: 200ms;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 5px 5px 8px rgb(104,104,104);
+}
+
+figure img{
+    height: 230px;
+    width: 95%;
+    padding: 8px;
+}
+
+h1{
+    font-weight: lighter;
+}
+
+h2{
+    font-size: 1.3rem;
+}
+
+button{
+    font-size: 20px;
+    padding: 4px 12px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border:1px solid #ccc;
+    transition: background-color 300ms;
+}
+
+button:hover{
+    background-color: #00b4d8;
+    color:white;
+}
+
+figure:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
