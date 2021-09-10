@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+div{
+    height: 100px;
+    width: 100px;
+    border-top: 10px solid lightpink;
+    border-left: 10px solid lightskyblue;
+    border-right: 10px solid lightslategray;
+    border-bottom: 10px solid lightyellow;
+
+    border-radius: 50%;
+
+    animation: 500ms linear infinite loader;
+
+}
+
+body{
+    border: 2px solid black;
+    height: 99vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes loader{
+
+    100%{
+        transform: rotateZ(360deg);
+    }
+
+
+}

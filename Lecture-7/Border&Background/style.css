@@ -1,0 +1,47 @@
+h1{
+    width: 70vw;
+    text-align: center;
+    margin: 30px auto;
+    font-size: 4rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* border-top:10px solid lightskyblue;
+    border-left: 10px solid lightsalmon;
+    border-right: 10px solid lightseagreen;
+    border-bottom: 10px solid lightyellow; */
+
+    border:10px solid palevioletred;
+
+}
+
+p{
+    width: 70vw;
+    margin: 20px auto;
+    border-left: 10px solid gray;
+    padding-left: 16px;
+}
+
+
+div{
+    height: 200px;
+    width: 400px;
+    border:8px solid black;
+    background-color: lightsalmon;
+    margin: 30px auto;
+
+    /* border-radius: 50%; */
+    border-radius: 15px 50px;
+}
+
+section{
+    height: 350px;
+    width: 700px;
+    border:1px solid #ccc;
+    margin:20px auto;
+    background-image: url('https://images.unsplash.com/photo-1594708767771-a7502209ff51?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDV8QkpKTXR0ZURKQTR8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: palevioletred;
+    filter: grayscale(80%);
+}
