@@ -1,0 +1,20 @@
+:root{
+    /* CSS Variables */
+    --main-color:#ccc;
+    --heading-ka-color: purple;
+}
+
+
+section{
+    width: 75vw;
+    border: 1px solid #ccc;
+    margin:30px auto;
+    padding: 16px;
+    background-color: var(--main-color);
+
+}
+
+h1{
+    font-size: 2.5rem;
+    color: var(--heading-ka-color);
+}
