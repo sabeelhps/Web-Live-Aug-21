@@ -1,0 +1,161 @@
+Array Methods
+
+----------Basic Methods (push,pop,shift,unshift)----
+
+const colors = ['Blue','Orange','Green','Brown'];
+undefined
+colors.push('Purple','lightgreen','aqua');
+7
+colors
+(7) ['Blue', 'Orange', 'Green', 'Brown', 'Purple', 'lightgreen', 'aqua']
+colors.pop()
+'aqua'
+colors
+(6) ['Blue', 'Orange', 'Green', 'Brown', 'Purple', 'lightgreen']
+const removedColor  = colors.pop()
+undefined
+removedColor
+'lightgreen'
+colors
+(5) ['Blue', 'Orange', 'Green', 'Brown', 'Purple']
+
+
+
+------------------- shift and unshift
+
+
+const colors = ['Blue','Orange','Green','Brown'];
+undefined
+colors
+(4) ['Blue', 'Orange', 'Green', 'Brown']
+colors.unshift('Black','White','Gray','Red');
+8
+colors
+(8) ['Black', 'White', 'Gray', 'Red', 'Blue', 'Orange', 'Green', 'Brown']
+colors.shift()
+'Black'
+colors
+(7) ['White', 'Gray', 'Red', 'Blue', 'Orange', 'Green', 'Brown']
+
+
+
+------------------------Arrays are reference type
+
+const colors = ['Blue','Orange','Green','Brown'];
+undefined
+const colorsCopy = colors
+undefined
+colorsCopy.push(99,88,77,66);
+8
+colors
+(8) ['Blue', 'Orange', 'Green', 'Brown', 99, 88, 77, 66]
+colorsCopy
+(8) ['Blue', 'Orange', 'Green', 'Brown', 99, 88, 77, 66]
+colors === colorsCopy
+true
+
+
+---------Other array methods -------------
+
+slice() ========
+
+colors
+(6) ['Blue', 'Orange', 'Green', 'Brown', 'White', 'Purple']
+colors.slice(2)
+(4) ['Green', 'Brown', 'White', 'Purple']
+colors.slice(2,5);
+(3) ['Green', 'Brown', 'White']
+
+
+
+splice() ================
+
+colors
+(6) ['Blue', 'Orange', 'Green', 'Brown', 'White', 'Purple']
+colors.splice(2,3,999,100,200,300);
+(3) ['Green', 'Brown', 'White']
+colors
+(7) ['Blue', 'Orange', 999, 100, 200, 300, 'Purple']
+colors
+(7) ['Blue', 'Orange', 999, 100, 200, 300, 'Purple']
+colors.splice(1,1)
+['Orange']
+colors
+(6) ['Blue', 999, 100, 200, 300, 'Purple']
+
+
+
+split() =====================
+
+const url = 'http://youtube.com/coding-block/myvideo.mp4';
+undefined
+url.split('/');
+(5) ['http:', '', 'youtube.com', 'coding-block', 'myvideo.mp4']
+url.split('/').pop()
+'myvideo.mp4'
+
+
+
+join() ======================
+
+const arr = [1,2,3,4,5,6,7];
+undefined
+arr.join('-->')
+'1-->2-->3-->4-->5-->6-->7'
+
+
+
+concat() ==============
+
+const arr1 = [1,2,3];
+undefined
+const arr2 = ['Mango','Apple','Oranges','Guava'];
+undefined
+arr1.concat(arr2)
+(7) [1, 2, 3, 'Mango', 'Apple', 'Oranges', 'Guava']
+const ans = arr1.concat(arr2)
+undefined
+ans
+(7) [1, 2, 3, 'Mango', 'Apple', 'Oranges', 'Guava']
+arr1
+(3) [1, 2, 3]
+arr2
+(4) ['Mango', 'Apple', 'Oranges', 'Guava']
+
+
+arr1
+(3) [1, 2, 3]
+arr2
+(4) ['Mango', 'Apple', 'Oranges', 'Guava']
+const arr3 = [999,888,777];
+undefined
+arr1.concat(arr2,arr3);
+(10) [1, 2, 3, 'Mango', 'Apple', 'Oranges', 'Guava', 999, 888, 777]
+
+
+includes() ===============
+
+const fruits = ['Apple','Guava','Oranges'];
+undefined
+fruits.includes('Apple')
+true
+fruits.includes('Grapes')
+false
+
+indexOf =======================
+
+fruits
+(3) ['Apple', 'Guava', 'Oranges']
+fruits.indexOf('Guava')
+1
+fruits.indexOf('Litchi')
+-1
+
+
+reverse() ======================
+
+fruits.reverse()
+(3) ['Oranges', 'Guava', 'Apple']
+fruits
+(3) ['Oranges', 'Guava', 'Apple']
+
