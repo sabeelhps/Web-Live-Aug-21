@@ -55,13 +55,52 @@
 
 // --------------------------------------------
 
-var x = 100;
+// var x = 100;
 
-function fun() {
-    var y = 99;
-    console.log('Inside fun');
-    console.log(y);
+// function fun() {
+//     var y = 99;
+//     console.log('Inside fun');
+//     console.log(y);
+// }
+
+// console.log(x);
+// fun();
+
+
+// ----------------------------------------------
+
+
+// console.log(a);
+
+// b();
+
+
+// function b() {
+//     var c = 87;
+//     console.log(c);
+// }
+
+
+// var a = 100;
+
+
+// ----------------------------------------------------
+
+
+console.log(a);
+
+function b() {
+    
+    c();
+
+    var d = 9999;
+
+    function c() {
+        console.log(d)
+    }
+
 }
+b();
 
-console.log(x);
-fun();
+var a = 100;
+
