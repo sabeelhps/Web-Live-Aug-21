@@ -1,0 +1,10 @@
+section{
+    width: 400px;
+    margin: 50px auto;
+    box-shadow: 1px 1px 3px gray;
+    border:1px solid #ccc;
+}
+
+section input,button{
+    font-size: 1.5rem;
+}

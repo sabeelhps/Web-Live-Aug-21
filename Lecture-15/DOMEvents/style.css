@@ -1,0 +1,6 @@
+.heading{
+    border: 3px solid black;
+    background-color: lightgreen;
+    box-shadow: 1px 1px 3px gray;
+    padding: 16px;
+}
