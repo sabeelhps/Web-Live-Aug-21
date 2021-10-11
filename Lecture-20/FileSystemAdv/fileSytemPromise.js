@@ -73,7 +73,7 @@ readF1()
         console.log('Everything Done!!!!!!');
     })
     .catch((err) => {
-        console.log(err);
+        console.log(err.message);
         console.log('something went wrong');
     });
 
