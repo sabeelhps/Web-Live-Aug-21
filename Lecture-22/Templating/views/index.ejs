@@ -1,13 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Index Page</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti soluta ullam dignissimos eius autem repudiandae eaque dolore natus, sit at veniam praesentium voluptatum magnam ab ipsa a quas dicta laboriosam!</p>
-</body>
-</html>
+
+<%- include("./partials/header") %>
+<%- include("./partials/navbar") %>
+
+
+<h1>Index Page</h1>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti soluta ullam dignissimos eius autem repudiandae eaque dolore natus, sit at veniam praesentium voluptatum magnam ab ipsa a quas dicta laboriosam!</p>
+
+<button id="btn">Click Me</button>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mx-auto mb-2" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mx-auto  mb-2" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mx-auto  mb-2" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        </div>
+    </div>
+</div>
+
+<%- include("./partials/footer") %>
