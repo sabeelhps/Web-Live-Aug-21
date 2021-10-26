@@ -1,27 +1,31 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const { v4: uuid } = require('uuid');
+const methodOverride = require('method-override');
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 
 
 const comments = [
     {
-        id: 0,
+        id: uuid(),
         username: 'Sabeel',
         text: 'Nice Product.Go for It!!'
     },
     {
-        id: 1,
+        id: uuid(),
         username: 'Kartik',
         text: 'Bad Product dont buy it'
     },
     {
-        id: 2,
+        id: uuid(),
         username: 'Vivek',
         text: 'Good Product'
     }
@@ -53,7 +57,7 @@ app.post('/comments', (req, res) => {
     
     const { username, text } = req.body;
 
-    comments.push({ username, text, id: comments.length });
+    comments.push({ username, text, id: uuid() });
 
     res.redirect('/comments');
 });
@@ -62,9 +66,31 @@ app.post('/comments', (req, res) => {
 // Displaying Particular Comment
 app.get('/comments/:commentid', (req, res) => {
     const { commentid } = req.params;
-    const foundComment = comments.find((comment)=>comment.id=== parseInt(commentid))
+    const foundComment = comments.find((comment) => comment.id === commentid);
     res.render('show',{comment:foundComment});
 });
+
+app.get('/comments/:commentid/edit', (req, res) => {
+
+    const { commentid } = req.params;
+
+    const foundComment = comments.find((comment) => comment.id === commentid);
+
+    res.render('edit', { comment: foundComment });
+});
+
+
+app.patch('/comments/:commentid', (req, res) => {
+    
+    const { commentid } = req.params;
+    const foundComment = comments.find((comment) => comment.id === commentid);
+
+    const { text } = req.body;
+
+    foundComment.text = text;
+
+    res.redirect('/comments');
+})  
 
 
 

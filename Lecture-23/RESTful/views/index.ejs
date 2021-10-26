@@ -17,6 +17,8 @@
                 <p><strong><%= comment.username %> </strong></p> 
                 <p><%= comment.text %> </p>
                 <a href="/comments/<%= comment.id %> ">Show</a>
+                <a href="/comments/<%= comment.id %>/edit ">Edit</a>
+                
             </li>
        <% }%>
     </ul>
