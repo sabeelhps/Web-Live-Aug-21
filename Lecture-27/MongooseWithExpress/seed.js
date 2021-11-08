@@ -31,6 +31,7 @@ const DUMMY_PRODUCTS = [
 ];
 
 async function seedDB() {
+    await Product.deleteMany({});
     
     await Product.insertMany(DUMMY_PRODUCTS);
     console.log('DB Seeded');

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product{
+            width: 460px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.26);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 15px;
+        }
+
+        section{
+            width: 80vw;
+            margin: 10px auto;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>All products</h1>
+
+    <a href="/products/new">Add New Product</a>
+
+    <section>
+
+      
+
+        <%for(let item of products){%>
+            <article class="product">
+                <h3><%= item.name %> </h3>
+                <h4> $ <%= item.price %> </h4>
+                <p><%= item.desc %> </p>
+                <a href="/products/<%=item._id%>">Show</a>
+            </article>
+        <%}%>
+    </section>
+    
+</body>
+</html>

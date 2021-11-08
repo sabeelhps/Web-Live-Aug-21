@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        section{
+            width: 460px;
+            margin:30px auto;
+            padding: 16px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.26);
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Show Product</h1>
+
+    <a href="/products">All products</a>
+    <section>
+        <p><em>Product ID : <%= product._id %> </em></p>
+        <h3>Name : <%= product.name %> </h3>
+        <h4>Price : $ <%= product.price %> </h4>
+        <p>Description : <%= product.desc %> </p>
+        <a href="/products/<%=product._id%>/edit">Edit</a>
+        <form action="/products/<%=product._id%>?_method=DELETE" method="post">
+            <button>Delete</button>
+        </form>
+    </section>
+    
+</body>
+</html>
