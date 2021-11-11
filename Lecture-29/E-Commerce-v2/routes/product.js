@@ -28,7 +28,7 @@ router.get('/products/:id', async (req, res) => {
 
     const { id } = req.params;
 
-    const product = await Product.findById(id);
+    const product = await Product.findById(id).populate('reviews');
 
     res.render('products/show', { product });
 });

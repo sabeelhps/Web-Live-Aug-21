@@ -18,13 +18,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
-
+// Routes
 const productRoutes = require('./routes/product');
-
+const reviewRoutes = require('./routes/review');
 
 
 
 app.use(productRoutes);
+app.use(reviewRoutes);
 
 
 const port = 5000;
