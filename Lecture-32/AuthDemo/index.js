@@ -62,15 +62,11 @@ app.post('/login', async(req, res) => {
 
     const user = await User.findOne({ username });
 
-    if (user) {
-       const validUser =  await bcrypt.compare(password,user.password)
-        if (!validUser) {
-           return res.send('Invalid Password')
-       }
-
-        req.session.user_id = user._id;
+    const validUser =  await bcrypt.compare(password,user.password)
+       
+    if (!validUser) {
+        return res.send('Wrong Password!!');
     }
-
 
     res.redirect('/secret');
 })
@@ -91,7 +87,7 @@ app.get('/logout', (req, res) => {
     }
 
     res.send('YOU ARE NOT LOGGED IN YET!!!');
-})
+});
 
 
 
