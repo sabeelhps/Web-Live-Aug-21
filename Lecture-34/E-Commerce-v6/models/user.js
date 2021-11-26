@@ -8,6 +8,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         trim: true,
         required: true
+    },
+    role: {
+        type: String,
+        default:'buyer'
     }
 });
 

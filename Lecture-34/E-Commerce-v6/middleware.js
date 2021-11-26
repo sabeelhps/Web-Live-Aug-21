@@ -1,3 +1,4 @@
+const Product = require('./models/product');
 const { productSchema,reviewSchema } = require('./schemas');
 
 
@@ -39,6 +40,36 @@ module.exports.validateReview = (req,res,next) => {
         return res.render('error', { err: msg });
     }
     next();
+}
+
+module.exports.isSeller = (req, res, next) => {
+
+    if (!req.user.role) {
+        req.flash('error', 'You dont have permissions to do that');
+        return res.redirect('/products');
+    }
+    
+    else if (req.user.role !=='seller') {
+        req.flash('error', 'You dont have permissions to do that');
+        return res.redirect('/products');
+    }
+    
+    next();
+}
+
+
+module.exports.isProductAuthor = async(req, res, next) => {
+    
+    // Getting a product id
+    const { id } = req.params;
+    const product = await Product.findById(id);
+    
+    if (!product.author.equals(req.user._id)) {
+        req.flash('error', 'You dont have permissions to do that');
+        return res.redirect(`/products/${id}`);
+    }
+    next();
+
 }
 
 

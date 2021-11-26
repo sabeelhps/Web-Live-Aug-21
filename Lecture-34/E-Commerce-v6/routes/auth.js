@@ -24,9 +24,10 @@ router.get('/register', (req, res) => {
 
 router.post('/register', async (req, res) => {
     
+
     try {
-        const { username, password, email } = req.body;
-        const user = new User({ username, email });
+        const { username, password, email,role } = req.body;
+        const user = new User({ username, email,role });
         const newUser = await User.register(user, password);
 
         req.login(newUser, function(err) {
@@ -61,7 +62,7 @@ router.post('/login',
 
         req.flash('success', `Welcome Back  ${req.user.username} Again!!`);
 
-        let redirectUrl = req.session.returnUrl;
+        let redirectUrl = req.session.returnUrl || '/products';
         
 
         // Removing review string from the url -> e.g = '/products/61a0dcdca41c19fe6bce6e02/review'

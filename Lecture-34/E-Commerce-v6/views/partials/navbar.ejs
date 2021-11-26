@@ -12,15 +12,19 @@
         <li class="nav-item">
           <a class="nav-link" href="/products">Products</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/products/new" tabindex="-1" aria-disabled="true">New</a>
-        </li>
+        <% if(currentUser && currentUser.role ==='seller'){ %>
+          <li class="nav-item">
+            <a class="nav-link" href="/products/new" tabindex="-1" aria-disabled="true">New</a>
+          </li>
+        <% } %> 
+       
       </ul>
       <div class="navbar-nav ml-auto">
 
           <%if(!currentUser){%>
             <a href="/login" class="nav-link">Login</a>
           <%}else{%>
+            <a href="#" class="nav-link text-capitalize">Hello <%= currentUser.username %> </a>
             <a href="#" class="nav-link"><i class="fas fa-shopping-cart"></i> 
               <sup><span class="badge bg-danger">2</span></sup> 
             </a>
