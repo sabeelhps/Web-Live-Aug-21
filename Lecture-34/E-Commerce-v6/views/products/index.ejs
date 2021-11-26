@@ -1,0 +1,32 @@
+<% layout('layouts/boilerplate') -%>
+
+<section class="container">
+
+
+  <%- include('../partials/flash')  %> 
+  
+  <section id="heading"> 
+    <h4 class="display-4"><i class="fab fa-shopify" style="margin-right: 20px;"></i>Shopping-Cart</h4>
+  </section>
+  <div class="row products">
+      <%for(let product of products){%>
+          <div class="col-lg-3 col-md-6 mb-3">
+              <div class="card shadow-sm mx-auto position-relative" style="width: 20rem;">
+                  <img src="<%=product.img%>" class="card-img-top" alt="item image">
+                  <span class="badge rounded-pill bg-light text-dark w-25 position-absolute translate-middle-y" style="top:41%;left:5%"><%=product.avgRating%>  &star; | <%=product.reviews.length%></span>
+                  <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between align-items-center"><span><%= product.name %></span> <a href="#" class="btn"><span><i class="far fa-heart"></i></span></a></h5>
+                    <p class="card-text fw-light"><%= product.desc%></p>
+                    <% if(product.reviews.length){ %>
+                      <p class="text-muted"><%=product.reviews.length%> reviews</p>
+                    <%}else{%>
+                      <p class="text-muted">No reviews</p>
+                    <% } %> 
+                    <h6 class="card-title"><span class="fw-lighter fs-6 text-decoration-line-through">Rs.<%= product.price %></span> Rs.<%= product.price %> <span class="fw-light fs-6 text-warning">( 50 % OFF )</span> </h6>
+                    <a href="/products/<%=product._id%>" class="btn btn-sm show-btn">Buy Now</a>
+                  </div>
+              </div>
+          </div>
+      <%}%>
+  </div>
+</section>
