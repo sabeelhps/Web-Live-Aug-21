@@ -63,6 +63,10 @@ const productRoutes = require('./routes/product');
 const reviewRoutes = require('./routes/review');
 const authRoutes = require('./routes/auth');
 
+app.get('/', (req, res) => {
+    res.render('home');
+});
+
 
 app.use(productRoutes);
 app.use(reviewRoutes);

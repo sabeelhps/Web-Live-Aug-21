@@ -1,0 +1,43 @@
+<% layout('layouts/boilerplate') -%>
+
+
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <form action="/products/<%=product._id%>?_method=PATCH" class="validated-form" method="POST" novalidate>
+            <div class="mb-3">
+                <label class="form-label" for="name">Name : </label>
+                <input class="form-control" type="text" name="name" id="name" placeholder="Product Name" value="<%=product.name%>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+            </div>
+            <div class="mb-3">
+                <label for="img" class="form-label">Image URL</label>
+                <input class="form-control" type="text" name="img" id="img" placeholder="Product Image URL" value="<%=product.img%>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+            </div>
+        
+            <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">$</span>
+                    <input type="text" name="price" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" value="<%=product.price%>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                </div>  
+            </div>
+        
+            <div class="mb-3">
+                <label class="form-label" for="desc">Description</label>
+                <textarea class="form-control" name="desc" id="desc" rows="5" required><%=product.desc%> </textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+            </div>
+            <button type="submit" class="btn btn-sm btn-success">Save</button>
+        </form>
+    </div>
+</div>

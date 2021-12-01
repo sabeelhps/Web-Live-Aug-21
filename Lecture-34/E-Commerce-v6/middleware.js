@@ -44,16 +44,11 @@ module.exports.validateReview = (req,res,next) => {
 
 module.exports.isSeller = (req, res, next) => {
 
-    if (!req.user.role) {
+    if (!(req.user.role && req.user.role === 'seller')) {
         req.flash('error', 'You dont have permissions to do that');
         return res.redirect('/products');
     }
-    
-    else if (req.user.role !=='seller') {
-        req.flash('error', 'You dont have permissions to do that');
-        return res.redirect('/products');
-    }
-    
+
     next();
 }
 
@@ -64,7 +59,7 @@ module.exports.isProductAuthor = async(req, res, next) => {
     const { id } = req.params;
     const product = await Product.findById(id);
     
-    if (!product.author.equals(req.user._id)) {
+    if (!(product.author && product.author.equals(req.user._id))) {
         req.flash('error', 'You dont have permissions to do that');
         return res.redirect(`/products/${id}`);
     }
