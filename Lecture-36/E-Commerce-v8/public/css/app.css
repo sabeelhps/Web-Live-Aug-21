@@ -13,6 +13,10 @@ main{
     padding: 10px;
 }
 
+.products .card{
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.26),-1px -1px 1px rgba(0,0,0,0.26);
+}
+
 .show-btn{
     background-color: var(--main-color);
     color:white;

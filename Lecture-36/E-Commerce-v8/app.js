@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -9,19 +13,24 @@ const flash = require('connect-flash');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
-
+const mongoSanitize = require('express-mongo-sanitize');
+const helmet = require('helmet');
+const MongoStore = require('connect-mongo');
 
 // Routes
 const productRoutes = require('./routes/product');
 const reviewRoutes = require('./routes/review');
 const authRoutes = require('./routes/auth');
 const cartRoutes = require('./routes/cart');
+const paymentRoutes = require('./routes/payment');
 
 // APIs
 const productApis = require('./routes/api/productapi');
 
 
-mongoose.connect('mongodb://localhost:27017/shopping-app')
+const dbUrl = process.env.dbUrl || 'mongodb://localhost:27017/shopping-app'
+
+mongoose.connect(dbUrl)
     .then(() => console.log('DB Connected'))
     .catch((err) => console.log(err));
 
@@ -32,10 +41,24 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+app.use(mongoSanitize());
+app.use(helmet({contentSecurityPolicy:false}));
+
+
+const secret = process.env.SECRET || 'weneedsomebettersecret'
+
+
+const store = MongoStore.create({
+    secret: secret,
+    mongoUrl: dbUrl,
+    touchAfter: 24 * 60 * 60,
+});
 
 
 const sessionConfig = {
-    secret: 'weneedsomebettersecret',
+    store,
+    name:'session',
+    secret: secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -61,6 +84,7 @@ passport.deserializeUser(User.deserializeUser());
 passport.use(new LocalStrategy(User.authenticate())); 
 
 app.use((req, res, next) => {
+   
     res.locals.currentUser = req.user;
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
@@ -76,11 +100,12 @@ app.get('/', (req, res) => {
 });
 
 
-app.use(productRoutes);
+app.use('/products',productRoutes);
 app.use(reviewRoutes);
 app.use(authRoutes);
 app.use(productApis);
 app.use(cartRoutes);
+app.use(paymentRoutes);
 
 
 const port = 5000;

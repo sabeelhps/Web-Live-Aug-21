@@ -29,7 +29,15 @@
                 <% } %> 
                 <li class="list-group-item fw-bold">Total Amount : $ <%=totalAmount%></li>
             </ul>
-           <button class="btn btn-sm btn-success my-3">Checkout</button>
+            <form action="/payment_gateway/payumoney" method="POST">
+              <input type="hidden" name="amount" value="<%=totalAmount%>"/>
+              <input type="hidden" name="phone" value="9999999999" />
+              <input type="hidden" name="service_provider" value="payu_paisa"/>
+              <input type="hidden" class="product" name="productinfo" 
+               value="<%=productInfo%> "/>
+               <button type="submit" class="btn btn-sm btn-success my-3">Checkout</button>
+            </form>
+          
         </div>
     </div>
 
