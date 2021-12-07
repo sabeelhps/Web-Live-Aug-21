@@ -1,0 +1,10 @@
+//WAY FORWARD FOR E-COMMERCE SITE......
+
+1.Delete a Review.
+2.Remove item from cart.
+3.Uploading Images using Cloudinary and Multer Middleware.
+4.Authentication using Google,Facebook.
+5.Search Product
+6.Sort Product according to Price 
+7.Add Filters
+8.Add profile of the User.

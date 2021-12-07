@@ -82,11 +82,12 @@ router.post('/payment/success',isLoggedIn, async(req, res) => {
     await order.save();
 
     // removing everything from current user's cart
-    user.cart.splice(0, req.user.cart.length);
+    user.cart.splice(0, user.cart.length);
 
     // saving the updated user in the database and assigning updated user to the req.user
     req.user = await user.save();
 
+    req.flash('success', 'Placed your order Successfully!!');
     res.redirect('/user/myorders');
 })
 

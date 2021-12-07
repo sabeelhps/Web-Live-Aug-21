@@ -109,8 +109,8 @@ app.use(orderRoutes);
 
 app.all('*', (req, res) => {
    
-    res.render('error',{err:'You are requesting a wrong url!!!'})
-})
+    res.render('error', { err: 'You are requesting a wrong url!!!' })
+});
 
 const port = 5000;
 
