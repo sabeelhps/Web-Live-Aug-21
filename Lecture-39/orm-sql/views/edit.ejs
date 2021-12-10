@@ -1,0 +1,30 @@
+<%- include("./partials/header")%>
+
+<main class="container mt-3">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h1 class="display-6">Edit Form</h1>
+            <form action="/blogs/<%=blog.id%>?_method=PATCH" method="post">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="text" name="title" id="title" value="<%=blog.title%> ">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="img">Image</label>
+                    <input class="form-control" type="text" name="img" id="img" value="<%=blog.img%> ">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="desc">Desc</label>
+                    <textarea class="form-control" name="desc" id="desc" rows="5"><%=blog.desc%></textarea>
+                </div>
+                <button type="submit" class="btn btn-sm btn-success">Submit</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+<%- include("./partials/footer")%>

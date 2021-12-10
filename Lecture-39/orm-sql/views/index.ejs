@@ -1,0 +1,41 @@
+<%- include("./partials/header")%>
+
+<main >
+    <section style="background-color: #e3f2fd;">
+        <div class="row">
+            <div class="col-lg-6 ps-5">
+                <h1 class="display-2">Medium is a place to write, read, and connect</h1>
+                <p>It's easy and free to post your thinking on any topic and connect with millions of readers.</p>
+            </div>
+            <div class="col-lg-6"></div>
+        </div>
+    </section>
+
+    <section class="container mt-5">
+        <% for(let blog of allBlogs){%>
+            <a href="/blogs/<%=blog.id%>" class="text-decoration-none text-dark">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="<%=blog.img%> " class="img-fluid rounded-start h-100" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title"><%=blog.title %> </h5>
+                          <p class="card-text"><%=blog.desc.substring(0,80)%> </p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>    
+            </a>
+        <% } %> 
+    </section>
+
+    
+
+</main>
+   
+
+<%- include("./partials/footer")%>
+    
