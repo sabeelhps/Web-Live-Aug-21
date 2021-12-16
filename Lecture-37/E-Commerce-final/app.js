@@ -64,7 +64,8 @@ const sessionConfig = {
     cookie: {
         httpOnly: true,
         expires: Date.now() + 1000* 60 * 60 * 24 * 7 * 1,
-        maxAge:1000* 60 * 60 * 24 * 7 * 1
+        maxAge: 1000 * 60 * 60 * 24 * 7 * 1,
+        sameSite:'none'
     }
 }
 
@@ -84,7 +85,6 @@ passport.deserializeUser(User.deserializeUser());
 passport.use(new LocalStrategy(User.authenticate())); 
 
 app.use((req, res, next) => {
-   
     res.locals.currentUser = req.user;
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
