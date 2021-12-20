@@ -1,0 +1,10 @@
+.todo{
+   padding: 16px;
+   width: 360px;
+   box-shadow: 0px 4px 8px rgba(0,0,0,0.26);
+   margin-bottom: 10px;
+   background-color: purple;
+   font-size: 1.2rem;
+   font-weight: bold;
+   color: white;
+}
