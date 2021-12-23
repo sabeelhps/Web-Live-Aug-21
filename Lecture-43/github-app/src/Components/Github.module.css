@@ -1,0 +1,11 @@
+.user{
+    width: 360px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.26);
+    padding: 16px;
+    margin:10px auto;
+}
+
+.user img{
+    width: 100%;
+}
