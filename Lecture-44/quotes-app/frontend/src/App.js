@@ -5,6 +5,8 @@ import MainNavigation from './Components/MainNavigation/MainNavigation';
 
 import AllQuotes from './Components/Pages/AllQuotes';
 import NewQuote from './Components/Pages/NewQuote';
+import ShowQuotes from './Components/Pages/ShowQuotes';
+
 
 const App = () => {
   return (
@@ -13,7 +15,8 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<AllQuotes />} />
-          <Route path="/new" element={<NewQuote/> }/>
+          <Route path="/new" element={<NewQuote />} />
+          <Route path="/quotes/:id" element={<ShowQuotes/> }/>
         </Routes>
       </main>
     </Fragment>

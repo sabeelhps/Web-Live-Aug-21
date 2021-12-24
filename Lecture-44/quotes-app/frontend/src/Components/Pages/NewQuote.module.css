@@ -1,0 +1,48 @@
+.new-quote-form{
+    background-color: rgb(159, 182, 159);
+    padding :16px;
+    width: 360px;
+    margin: 30px auto;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.26);
+}
+
+.new-quote-form label,input{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.new-quote-form label{
+    font-weight: bold;
+}
+
+.new-quote-form input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 5px;
+}
+
+.new-quote-form input:focus{
+    outline:none;
+}
+
+.new-quote-form textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 5px;
+}
+
+.new-quote-form textarea:focus{
+    outline: none;
+}
+
+.new-quote-form button{
+    border:none;
+    padding: 8px 16px;
+    font-weight: bold;
+    color:white;
+    background-color: rgb(32, 68, 32);
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.26);
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -21,4 +21,9 @@ router.post('/addQuotes', async (req, res) => {
 });
 
 
+router.get('/quotes/:id', async(req, res) => {
+    const quote = await Quotes.findById(req.params.id);
+    res.status(200).json(quote);
+})
+
 module.exports = router;

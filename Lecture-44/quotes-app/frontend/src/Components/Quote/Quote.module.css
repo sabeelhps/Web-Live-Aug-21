@@ -1,0 +1,39 @@
+.quote{
+    max-width:700px;
+    background-color: rgb(183, 218, 230);
+    padding: 16px 15px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.26);
+
+}
+
+.quote p{
+    margin:0;
+}
+
+.quote p:first-of-type{
+    font-size: large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.quote p:nth-of-type(2){
+    font-weight: light;
+    font-style: italic;
+}
+
+.quote button{
+    border:none;
+    width:150px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: rgb(49, 87, 49);
+    color:white;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.26);
+    font-weight: bold;
+}
