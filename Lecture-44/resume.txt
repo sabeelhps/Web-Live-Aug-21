@@ -1,0 +1,16 @@
+
+
+
+
+Projects
+
+1.Shopping Cart
+    Technologies : Node.js, Express.js ,MongoDB ,ejs, HTML, CSS, Bootstrap, Axios, Passport.js
+    - Shopping App where user can orders products
+    - Integrated payment gatway using PayUMoney
+    - Implented Authentication using passport.js
+
+
+2.Chat App
+    Technologies : Node.js, Sockets, Express.js, Bootstrap 
+    - 

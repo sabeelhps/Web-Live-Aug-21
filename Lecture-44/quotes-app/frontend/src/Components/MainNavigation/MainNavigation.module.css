@@ -1,0 +1,23 @@
+.nav{
+    background-color: rgb(125, 190, 125);
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 250px;
+}
+
+.nav h2{
+    color: white;
+}
+.nav a{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
